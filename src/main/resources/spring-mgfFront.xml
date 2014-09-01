@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-autowire="byName">
+
+    <bean id="memberClient" class="com.mgf.facade.impl.MemberClient" init-method="init">
+        <property name="memberPublicKey" value="${member.public.key}"/>
+        <property name="memberMd5KeyPath" value="${member.md5.key.path}"/>
+        <property name="memberGatewayUrl" value="${member.gateway.url}"/>
+        <property name="memberDefaultSignVersion" value="${member.default.sign.version}"/>
+        <property name="memberDefaultEncyptVersion" value="${member.default.encypt.version}"/>
+        <property name="memberDefaultServerVersion" value="${member.default.server.version}"/>
+        <property name="memberDefaultParterId" value="${member.default.parterId}"/>
+    </bean>
+</beans>
